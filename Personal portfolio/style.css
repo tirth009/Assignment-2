@@ -1,0 +1,153 @@
+/* --- Global Styles --- */
+@font-face {
+  font-family: "RalewayCustom";
+  src: url("fonts/Raleway-Regular.ttf"); /* Local font for headings */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Example */
+h1, h2, h3 {
+  font-family: 'RalewayCustom', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #333, #666);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/* Skills Section */
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.skills li {
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Project Cards with Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+/* Contact Form */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Advanced Selectors Examples --- */
+
+/* a. Descendant Selector */
+header .tagline {
+  font-size: 1.2rem;
+}
+
+/* b. Pseudo-class */
+.project-card:hover {
+  background-color: #f0f0f0;
+}
+
+/* c. Attribute Selector */
+input[type="email"] {
+  border-left: 4px solid #3498db;
+}
+
+/* d. Pseudo-element */
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  margin-top: 0.5rem;
+}
+
+/* Animation Example */
+.project-card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
